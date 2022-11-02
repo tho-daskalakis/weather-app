@@ -26,6 +26,8 @@ function createForm(): HTMLFormElement {
 
   submitBtn.addEventListener('click', (e) => {
     // console.log(e);
+    e.preventDefault();
+
     // Validate form
     validateForm();
 
