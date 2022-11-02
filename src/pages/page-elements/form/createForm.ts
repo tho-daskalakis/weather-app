@@ -1,0 +1,39 @@
+import { validateForm } from './validateForm';
+
+function createForm(): HTMLFormElement {
+  const form = document.createElement('form');
+  form.noValidate = true;
+
+  // Add input label
+  const inputLabel = document.createElement('label');
+  inputLabel.htmlFor = 'input';
+  inputLabel.textContent = 'Enter a location:';
+  form.appendChild(inputLabel);
+
+  // Add a text input field
+  const input = document.createElement('input');
+  input.id = 'input';
+  input.type = 'text';
+  input.required = true;
+  input.pattern = '[A-Za-z]+';
+  form.appendChild(input);
+
+  // Add a submit button
+  const submitBtn = document.createElement('button');
+  submitBtn.id = 'submit-form';
+  submitBtn.textContent = 'Submit';
+  form.appendChild(submitBtn);
+
+  submitBtn.addEventListener('click', (e) => {
+    // console.log(e);
+    // Validate form
+    validateForm();
+
+    // Submit request if valid
+    // submitForm(input.value);
+  });
+
+  return form;
+}
+
+export { createForm };
