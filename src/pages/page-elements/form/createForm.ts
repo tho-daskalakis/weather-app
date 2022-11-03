@@ -24,6 +24,18 @@ function createForm(): HTMLFormElement {
   submitBtn.textContent = 'Submit';
   form.appendChild(submitBtn);
 
+  // Error message display
+  const errorMsg = document.createElement('p');
+  errorMsg.id = 'input-error';
+  errorMsg.classList.add('error-message');
+  form.appendChild(errorMsg);
+
+  // Listeners
+
+  input.addEventListener('input', (e) => {
+    errorMsg.textContent = '';
+  });
+
   submitBtn.addEventListener('click', (e) => {
     // console.log(e);
     e.preventDefault();
