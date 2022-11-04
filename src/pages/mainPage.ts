@@ -8,6 +8,7 @@ function createMainPage(): void {
   // Add a description for the page
   const h1 = document.createElement('h1');
   h1.textContent = 'Weather app';
+  h1.classList.add('margin-8');
   app.appendChild(h1);
   // TODO: Create a function for the header
 
