@@ -1,3 +1,4 @@
+import { displayData } from './displayData';
 import { processData } from './processData';
 
 // Reference the API key
@@ -11,7 +12,8 @@ async function callApi(location: string) {
       { mode: 'cors' }
     );
     const data = await response.json();
-    processData(data);
+    // console.log(processData(data));
+    displayData(processData(data));
 
     return data;
   } catch (error) {

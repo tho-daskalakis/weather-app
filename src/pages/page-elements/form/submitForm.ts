@@ -1,6 +1,8 @@
+import { callApi } from '../../../utils/callApi';
+
 function submitForm(location: string) {
   // Request data
-  console.log(`Data for ${location}`);
+  callApi(location);
 }
 
 export { submitForm };

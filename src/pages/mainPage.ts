@@ -1,4 +1,4 @@
-import { displayInfo } from './page-elements/displayInfo';
+import { createInfoDisplay } from './page-elements/createInfoDisplay';
 import { createForm } from './page-elements/form/createForm';
 
 // Get container element
@@ -14,7 +14,7 @@ function createMainPage(): void {
   // Add input form to the page
   app.appendChild(createForm());
 
-  app.appendChild(displayInfo());
+  app.appendChild(createInfoDisplay());
 }
 
 export { createMainPage };
