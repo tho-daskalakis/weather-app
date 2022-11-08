@@ -3,7 +3,6 @@ import { validateForm } from './validateForm';
 function createForm(): HTMLFormElement {
   const form = document.createElement('form');
   form.noValidate = true;
-  form.classList.add('margin-8');
 
   // Add input label
   const inputLabel = document.createElement('label');

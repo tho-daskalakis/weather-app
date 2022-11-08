@@ -9,7 +9,8 @@ function processData(rawData: Data): Data {
     weather: rawData.weather,
     wind: rawData.wind,
   };
-  console.log(data);
+
+  console.log(data); // For testing
 
   return data;
 }

@@ -1,4 +1,4 @@
-import { displayData } from './displayData';
+import { displayDataOnCard } from './displayDataOnCard';
 import { processData } from './processData';
 
 // Reference the API key
@@ -12,8 +12,9 @@ async function callApi(location: string) {
       { mode: 'cors' }
     );
     const data = await response.json();
-    // console.log(processData(data));
-    displayData(processData(data));
+
+    // Handle data
+    displayDataOnCard(processData(data));
 
     return data;
   } catch (error) {
