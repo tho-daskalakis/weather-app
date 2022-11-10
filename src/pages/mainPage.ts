@@ -1,3 +1,4 @@
+import { createDefaultCard } from './page-elements/defaultCard';
 import { createForm } from './page-elements/form/createForm';
 
 // Get container element
@@ -12,6 +13,7 @@ function createMainPage(): void {
 
   // Add input form to the page
   app.appendChild(createForm());
+  app.appendChild(createDefaultCard());
 }
 
 export { createMainPage };

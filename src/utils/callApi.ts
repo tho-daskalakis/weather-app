@@ -1,4 +1,4 @@
-import { displayDataOnCard } from '../pages/page-elements/displayDataOnCard';
+import { displayDataOnMainCard } from '../pages/page-elements/displayDataOnCard';
 import { processData } from './processData';
 
 // Reference the API key
@@ -14,7 +14,7 @@ async function callApi(location: string) {
     const data = await response.json();
 
     // Handle data
-    displayDataOnCard(processData(data));
+    displayDataOnMainCard(processData(data));
 
     return data;
   } catch (error) {
