@@ -2,6 +2,7 @@ import { Data } from '../../utils/dataInterface';
 
 function createCard(
   imgURL: string,
+  isDay: boolean,
   titleText: string,
   bodyData?: Data
 ): HTMLDivElement {
@@ -11,6 +12,9 @@ function createCard(
   const image = document.createElement('img');
   image.classList.add('image');
   image.src = imgURL;
+  // Change the bg-color for readability
+  image.style.backgroundColor = isDay ? 'yellow' : 'darkblue';
+
   card.appendChild(image);
 
   const title = document.createElement('p');
