@@ -1,6 +1,5 @@
-import { createCard } from '../pages/page-elements/createCard';
-import { capitalizeString } from './capitalizeString';
-import { Data } from './dataInterface';
+import { Data } from '../../utils/dataInterface';
+import { createCard } from './createCard';
 
 function displayDataOnCard(data: Data) {
   // Get weather image

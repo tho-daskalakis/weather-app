@@ -1,4 +1,4 @@
-import { displayDataOnCard } from './displayDataOnCard';
+import { displayDataOnCard } from '../pages/page-elements/displayDataOnCard';
 import { processData } from './processData';
 
 // Reference the API key
