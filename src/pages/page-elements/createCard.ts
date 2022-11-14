@@ -1,3 +1,4 @@
+import { capitalizeString } from '../../utils/capitalizeString';
 import { Data } from '../../utils/dataInterface';
 
 function createCard(
@@ -9,13 +10,23 @@ function createCard(
   const card = document.createElement('div');
   card.classList.add('card');
 
+  const figure = document.createElement('figure');
+  figure.classList.add('image');
+
   const image = document.createElement('img');
-  image.classList.add('image');
   image.src = imgURL;
   // Change the bg-color for readability
   image.style.backgroundColor = isDay ? 'deepskyblue' : 'midnightblue';
+  figure.appendChild(image);
 
-  card.appendChild(image);
+  const caption = document.createElement('figcaption');
+  caption.textContent = bodyData
+    ? `${capitalizeString(bodyData.weather[0].description)}, 
+    ${(Math.round(bodyData.main.temp * 10) / 10).toString()} C`
+    : '';
+  figure.appendChild(caption);
+
+  card.appendChild(figure);
 
   const title = document.createElement('p');
   title.classList.add('title');

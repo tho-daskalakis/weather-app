@@ -10,18 +10,10 @@ function displayDataOnMainCard(data: Data): void {
   const imgURL = `http://openweathermap.org/img/wn/${conditionCode}@2x.png`;
 
   // Create card title
-  const title =
-    data.name +
-    ', ' +
-    data.sys.country +
-    ', ' +
-    // Round temperature to one decimal place
-    (Math.round(data.main.temp * 10) / 10).toString() +
-    'C, ' +
-    data.weather[0].description;
+  const title = data.name + ', ' + data.sys.country;
 
   // Create card
-  const card = createCard(imgURL, isDay, title);
+  const card = createCard(imgURL, isDay, title, data);
   card.classList.add('main-display');
 
   const app = document.getElementById('app') as HTMLDivElement;
