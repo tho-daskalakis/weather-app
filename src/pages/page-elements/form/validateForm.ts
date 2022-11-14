@@ -6,6 +6,8 @@ function validateForm() {
     'input-error'
   ) as HTMLParagraphElement;
 
+  input.pattern = '[\\w\\s?]+';
+
   const userInput = input.value;
   if (userInput === '') {
     // Empty input

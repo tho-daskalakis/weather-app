@@ -15,7 +15,6 @@ function createForm(): HTMLFormElement {
   input.id = 'input';
   input.type = 'text';
   input.required = true;
-  input.pattern = '[A-Za-z]+';
   form.appendChild(input);
 
   // Add a submit button
