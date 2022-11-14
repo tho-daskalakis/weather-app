@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   font-family: Raleway;
   overflow: auto;
+  background-color: cadetblue;
 }
 
 .margin-8 {
@@ -40,9 +41,21 @@ form {
   display: flex;
   align-items: center;
   gap: 8px;
+
+  input {
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid lightgray;
+
+    &:focus {
+      outline: none;
+      border: 1px solid orange;
+    }
+  }
 }
 
 .card {
+  background-color: lightgray;
   width: 100%;
   height: 100%;
   border: solid 1px lightgray;
@@ -77,18 +90,18 @@ form {
   .title {
     grid-row: 2 / span 1;
     grid-column: 1 / span 2;
-    background-color: silver;
+    // background-color: silver;
+    text-align: center;
   }
 
   .body {
     grid-row: 3 / span 1;
     grid-column: 1 / span 2;
-    background-color: darkolivegreen;
+    // background-color: darkolivegreen;
 
-    .body-data {
-      display: flex;
-      flex-direction: column;
-    }
+    display: grid;
+    grid-template-rows: repeat(5, 45px);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
