@@ -11,12 +11,19 @@ async function callApi(location: string) {
       `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`,
       { mode: 'cors' }
     );
-    const data = await response.json();
+    // console.log(response);
 
-    // Handle data
-    displayDataOnMainCard(processData(data));
+    // Handle no location found
+    if (response.ok) {
+      const data = await response.json();
+      // console.log(data);
 
-    return data;
+      // Handle data
+      displayDataOnMainCard(processData(data));
+      return data;
+    } else {
+      alert(response.statusText);
+    }
   } catch (error) {
     console.log(error);
   }
