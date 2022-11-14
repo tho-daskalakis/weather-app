@@ -1,4 +1,4 @@
-import { Data } from './dataInterface';
+import { Data } from './interfaces/dataInterface';
 
 function processData(rawData: Data): Data {
   const data: Data = {

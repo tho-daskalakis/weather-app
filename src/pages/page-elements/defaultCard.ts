@@ -1,4 +1,4 @@
-import { createCard } from './createCard';
+import { createCard } from './card/createCard';
 
 function createDefaultCard(): HTMLDivElement {
   const defaultCard = createCard(

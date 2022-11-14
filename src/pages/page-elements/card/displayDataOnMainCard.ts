@@ -1,4 +1,4 @@
-import { Data } from '../../utils/dataInterface';
+import { Data } from '../../../utils/interfaces/dataInterface';
 import { createCard } from './createCard';
 
 function displayDataOnMainCard(data: Data): void {

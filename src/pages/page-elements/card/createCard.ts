@@ -1,5 +1,5 @@
-import { capitalizeString } from '../../utils/capitalizeString';
-import { Data } from '../../utils/dataInterface';
+import { capitalizeString } from '../../../utils/capitalizeString';
+import { Data } from '../../../utils/interfaces/dataInterface';
 
 function createCard(
   imgURL: string,
