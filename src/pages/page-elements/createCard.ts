@@ -13,7 +13,7 @@ function createCard(
   image.classList.add('image');
   image.src = imgURL;
   // Change the bg-color for readability
-  image.style.backgroundColor = isDay ? 'yellow' : 'darkblue';
+  image.style.backgroundColor = isDay ? 'deepskyblue' : 'midnightblue';
 
   card.appendChild(image);
 
