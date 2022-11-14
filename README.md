@@ -9,3 +9,6 @@ A basic weather app that utilizes a weather API to provide weather data to the u
   - [x] Create a helper function to convert wind degrees to cardinal
   - [ ] Create seperate functions for seperate body data elements
 - [ ] Handle bad location input
+  - [ ] Fix valid input being aa single word
+  - [ ] Display message when no location is found
+- [ ] Change weather image to figcaption to include weather description
