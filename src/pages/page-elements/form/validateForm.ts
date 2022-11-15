@@ -8,7 +8,10 @@ function validateForm() {
 
   input.pattern = '[\\w\\s?]+';
 
-  const userInput = input.value;
+  // Cleanup input before request
+  const userInput = input.value.trim().replace(/\s+/gi, ' ');
+  // console.log('Trimmed input:', userInput);
+
   if (userInput === '') {
     // Empty input
     console.log('Empty input');

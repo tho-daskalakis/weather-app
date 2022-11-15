@@ -11,4 +11,5 @@ A basic weather app that utilizes a weather API to provide weather data to the u
 - [x] Handle bad location input
   - [x] Fix valid input being a single word
   - [x] Display message when no location is found
+  - [x] Strip input from whitespace before request
 - [x] Change weather image to figcaption to include weather description
