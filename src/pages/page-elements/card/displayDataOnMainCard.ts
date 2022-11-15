@@ -1,4 +1,6 @@
 import { Data } from '../../../utils/interfaces/dataInterface';
+import { convertDegreesToDirection } from '../../../utils/windRepresentation';
+import { appendBodyData } from './appendBodyData';
 import { createCard } from './createCard';
 
 function displayDataOnMainCard(data: Data): void {
@@ -19,6 +21,22 @@ function displayDataOnMainCard(data: Data): void {
   const app = document.getElementById('app') as HTMLDivElement;
   const currentMain = app.querySelector('.main-display') as HTMLDivElement;
   app.replaceChild(card, currentMain);
+
+  // Represent data
+  const dataArr = [
+    { 'Max temp': data.main.temp_max },
+    { 'Min temp': data.main.temp_min },
+    { 'Feels like': data.main.feels_like },
+    { Humidity: data.main.humidity },
+    {
+      Wind: `${data.wind.speed} km/h, ${convertDegreesToDirection(
+        data.wind.deg
+      )}`,
+    },
+  ];
+
+  // Append bodyData
+  appendBodyData(card, dataArr);
 }
 
 export { displayDataOnMainCard };

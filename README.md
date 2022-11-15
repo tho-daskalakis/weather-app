@@ -8,6 +8,7 @@ A basic weather app that utilizes a weather API to provide weather data to the u
 - [ ] Implement bodyData function for createCard
   - [x] Create a helper function to convert wind degrees to cardinal
   - [ ] Create seperate functions for seperate body data elements
+- [ ] Use timezone data to display location time
 - [x] Handle bad location input
   - [x] Fix valid input being a single word
   - [x] Display message when no location is found

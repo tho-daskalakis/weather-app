@@ -3,24 +3,24 @@ function convertDegreesToDirection(degrees: number): string {
   const rotation = 22.5; // A sixteenth of a circle
 
   if (360 - rotation < degrees) {
-    return 'N';
+    return 'North';
   } else if (360 - 3 * rotation < degrees) {
-    return 'NW';
+    return 'NorthWest';
   } else if (360 - 5 * rotation < degrees) {
-    return 'W';
+    return 'West';
   } else if (360 - 7 * rotation < degrees) {
-    return 'SW';
+    return 'SouthWest';
   } else if (360 - 9 * rotation < degrees) {
-    return 'S';
+    return 'South';
   } else if (360 - 11 * rotation < degrees) {
-    return 'SE';
+    return 'SouthEast';
   } else if (360 - 13 * rotation < degrees) {
-    return 'E';
+    return 'East';
   } else if (360 - 15 * rotation < degrees) {
-    return 'NE';
+    return 'NorthEast';
   } else {
     // Degrees < 22.5
-    return 'N';
+    return 'North';
   }
 }
 

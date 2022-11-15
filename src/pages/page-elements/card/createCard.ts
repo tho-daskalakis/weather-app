@@ -1,5 +1,6 @@
 import { capitalizeString } from '../../../utils/capitalizeString';
 import { Data } from '../../../utils/interfaces/dataInterface';
+import { appendBodyData } from './appendBodyData';
 
 function createCard(
   imgURL: string,
@@ -20,10 +21,15 @@ function createCard(
   figure.appendChild(image);
 
   const caption = document.createElement('figcaption');
-  caption.textContent = bodyData
-    ? `${capitalizeString(bodyData.weather[0].description)}, 
-    ${(Math.round(bodyData.main.temp * 10) / 10).toString()} C`
-    : '';
+
+  if (bodyData) {
+    caption.textContent = `${capitalizeString(
+      bodyData.weather[0].description
+    )}, 
+    ${(Math.round(bodyData.main.temp * 10) / 10).toString()} C`;
+  } else {
+    caption.textContent = '';
+  }
   figure.appendChild(caption);
 
   card.appendChild(figure);
